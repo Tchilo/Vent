@@ -17,6 +17,7 @@ RSpec.describe 'Users', type: :request do
       expect(response.body).to include('Users#index')
     end
   end
+
   describe 'GET #show' do
     before(:example) { get user_path(1) }
 
