@@ -27,6 +27,11 @@ cd Vent
 rails s
 ```
 
+### running tests
+Enter this in the terminal:
+```
+rspec
+```
 
 ### Usage
 in the terminal you can run the code below
