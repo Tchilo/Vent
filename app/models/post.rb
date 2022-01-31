@@ -8,7 +8,7 @@ class Post < ApplicationRecord
     comments.last(5)
   end
 
-  private 
+  private
 
   def update_user_post_counter
     user.posts_counter += 1
