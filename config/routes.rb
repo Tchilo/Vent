@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root 'users#index'
-
+  get "show/:id" => 'users#show', as: 'user'
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show] 
   end
