@@ -1,0 +1,22 @@
+<section class="flex flex-col bg-blue-400 ">
+ <% @users.each do |user| %>
+
+ <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 m-20">
+ <%= link_to user do %>
+ <div class=" get-img w-23% h-10 flex rounded">
+ <%= image_tag(user.photo) %>
+ </div>
+  <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+  <p class="text-lg font-medium text-sky-500 dark:text-sky-400">
+    <h1><%= user.name%></h1>
+  </p>
+
+   <span class="text-slate-700 dark:text-slate-500">number of posts: <%= user.posts_counter %></span>
+      
+   </div>
+ <%end%>
+   </figure>
+
+   <%end%>
+</section>
+

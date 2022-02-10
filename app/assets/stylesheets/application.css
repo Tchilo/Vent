@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+.get-img img {
+  width: 23%;
+  border-radius: 8px;
+  height: auto;
+}
+
+.post-data {
+  margin-bottom: 25px;
+}
+
+.post-data h2 {
+  margin-bottom: 15px;
+}
