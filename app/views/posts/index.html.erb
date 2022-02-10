@@ -1,2 +1,13 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1><%=@user.name%></h1>
+
+<% @posts.each do |post| %>
+        <h2 class="card-title"> <%= post.title%> </h2>
+        <p class="card-text" > <%= post.text%> </p>
+          <p> comments: <%= post.comments_counter%> </p>
+                <p> likes: <%= post.likes_counter%> </p>
+                <br/>
+        <%# <% post.recent_comments.each do |comment| %> 
+                <%# <p> <%=  comment.text%> </p> 
+        <%# <%end%> 
+        <%= link_to "view post", user_post_path(post.user.id, post.id), :class => "btn btn-primary" %>
+<%end%>

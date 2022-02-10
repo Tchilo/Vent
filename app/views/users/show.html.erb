@@ -1,17 +1,21 @@
-<section>
-<div>
-<div>
-<%= image_tag(@user.photo)%>
-</div class="d-flex">
-<div>
-<h2><%= @user.name%></h2>
-<span>Number of posts:x<span>
+<div class="">
+<%= image_tag @user.photo, width: 100, :class => "rounded mx-auto d-block" %> 
+<h1> <%= @user.name %> </h1>
 </div>
-</div>
+
 <div>
-<h2>Bio</h2>
-<p><%= @user.bio%></p>
+<p> <%= @user.bio %></p>
 </div>
-<div></div>
-<button>See all posts</button>
-</section>
+
+<div class="flex flex-col gap-16 h-auto">
+<%@posts.each do |post|%>
+
+<%= link_to posts_path_url do%>
+<div class="post-data">
+        <h2> <%= post.title%> </h2>
+        <p> <%= post.text%> </p>
+       
+</div>
+<%end%>
+<%end%>
+</div>

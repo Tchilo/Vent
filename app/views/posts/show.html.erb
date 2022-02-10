@@ -1,3 +1,13 @@
-<section>
+<div class="h-14">
+<h1><%= @post.title%> by <%=@user.name%></h1>
+<%=@post.text%>
+</div>
 
-</section>
+<div class="h-auto m-auto border-green-500 ">
+<ul>
+<% @comments.each do |comment|%>
+
+<li><%=@user.name%>:<%=comment.text%></li>
+<%end%>
+</ul>
+</div>
