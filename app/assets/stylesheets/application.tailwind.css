@@ -1,3 +1,4 @@
+/* stylelint-disable unknown at-rule "@tailwind" */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
